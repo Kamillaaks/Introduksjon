@@ -27,6 +27,16 @@
         .text {
             padding-left: 20px;
             margin-block: auto;
+            color: #333;
+        }
+        .button {
+            background-color: #ffe5ec;
+            border: none;
+            color: #333;
+            text-align: center;
+            font-size: 12px;
+            border-radius: 8px;
+            padding: 7px;
         }
     </style>
 </head>
@@ -47,10 +57,22 @@
         </div>
     </div>
 
-    <button type="button" onclick="myFunction()">Endre bakgrunnsfarge</button>
+    <button class="button" type="button" onclick="myFunction()">Endre bakgrunnsfarge𓍢ִ໋🌷͙֒</button>
     <script>
+        let color = 1;
         function myFunction() {
-            document.body.style.backgroundColor = "#fb6f92";
+            if (color === 1) {
+                document.body.style.backgroundColor = "#fb6f92";
+                color = 2;
+            }
+            else if (color === 2) {
+                document.body.style.backgroundColor = "#ffb3c6";
+                color = 3;
+            }
+            else {
+                document.body.style.backgroundColor = "#ff8fab";
+                color = 1
+            }
         }
     </script>
 </body>
